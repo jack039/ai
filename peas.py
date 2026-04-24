@@ -52,3 +52,35 @@ Sensors: Detect location and dirt
 Conclusion:
 
 State space formulation helps in solving problems using search techniques, while PEAS representation helps in designing intelligent agents by defining their environment and behavior. Both are fundamental concepts in Artificial Intelligence.'''
+
+'''cx, y = 4, 3
+target = 2
+
+a, b = 0, 0   # initial state
+
+if target <= max(x, y):
+    print((a,b))        # (0,0)
+    
+    a = x
+    print((a,b))        # (4,0)
+    
+    b = min(a, y)
+    a = a - b
+    print((a,b))        # (1,3)
+    
+    b = 0
+    print((a,b))        # (1,0)
+    
+    b = a
+    a = 0
+    print((a,b))        # (0,1)
+    
+    a = x
+    print((a,b))        # (4,1)
+    
+    b = y
+    a = a - (y - b)
+    print((a,b))        # (2,3) → target achieved
+
+else:
+    print("Not possible")'''
